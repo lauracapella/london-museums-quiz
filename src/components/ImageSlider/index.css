@@ -1,0 +1,46 @@
+ .slider-img {
+    /* width: 600px;
+    position: relative;
+    background-color: blue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0; 
+    right: 0; 
+    margin: auto ; */
+    
+
+    position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    } 
+
+    .slides {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+.slider--contenedor {
+    display: "flex";
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.slider--inner {
+    margin: auto;
+    width: 60vw;
+    aspect-ratio: calc(16 / 9);
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+}

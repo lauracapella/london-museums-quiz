@@ -1,0 +1,58 @@
+.content{
+    height: 100vh;
+}
+
+/* .image-1{
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    width: 20%;
+    height: 20%;
+} */
+html, body{
+    height: 100%;
+    margin: 0;
+ }
+
+ img {
+     width: 50%;
+ }
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh;
+    min-height: 500px;
+ }
+ 
+ .grid > img:nth-child(1){
+   align-self: end;
+   justify-self: center;
+ }
+ 
+ .grid > img:nth-child(3){
+   align-self: end;
+ }
+ 
+ .grid > img:nth-child(4){
+   justify-self: end;
+ }
+ 
+ .grid > img:nth-child(5){
+   justify-self: center;
+   align-self: center;
+ }
+ 
+ .grid > img:nth-child(7){
+   justify-self: end;
+ }
+ 
+ .grid > img:nth-child(8){
+   align-self: center;
+   justify-self: center;
+ }
+ 
+ .grid > img:nth-child(9){
+   justify-self: center;
+   align-self: center;
+ }

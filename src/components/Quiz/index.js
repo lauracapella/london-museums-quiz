@@ -10,109 +10,111 @@ const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const questions = [
     {
-      text: "What is the capital of America?",
+      text: "Which type of art do you prefer to see in a museum?",
       options: [
-        { id: 0, text: "New York City", isCorrect: false, etiqueta:"amor" },
-        { id: 1, text: "Boston", isCorrect: false,  etiqueta:"drama", etiqueta2:"amor" },
-        { id: 2, text: "Santa Fe", isCorrect: false,  etiqueta:"humor", etiqueta2:"classics" },
-        { id: 3, text: "Washington DC", isCorrect: true , etiqueta:"classics", etiqueta2:"drama"},
-      ],
-    },
-    {
-      text: "What year was the Constitution of America written?",
-      options: [
-        { id: 0, text: "1787", isCorrect: true, etiqueta:"amor"},
-        { id: 1, text: "1776", isCorrect: false, etiqueta:"drama"},
-        { id: 2, text: "1776", isCorrect: false, etiqueta:"humor" },
-        { id: 3, text: "1774", isCorrect: false, etiqueta:"classics" },
-      ],
-    },
-    {
-      text: "Who was the second president of the US?",
-      options: [
-        { id: 0, text: "John Adams", isCorrect: true, etiqueta:"amor" },
-        { id: 1, text: "Paul Revere", isCorrect: false, etiqueta:"drama"},
-        { id: 2, text: "Thomas Jefferson", isCorrect:false, etiqueta:"humor" },
-        { id: 3, text: "Benjamin Franklin", isCorrect: false, etiqueta:"classics" },
-      ],
-    },
-    {
-      text: "What is the largest state in the US?",
-      options: [
-        { id: 0, text: "California", isCorrect: false, etiqueta:"amor" , etiqueta2:"catala" },
-        { id: 1, text: "Alaska", isCorrect: true, etiqueta:"drama", etiqueta2:"catala" },
-        { id: 2, text: "Texas", isCorrect: false, etiqueta:"humor", etiqueta2:"classics" },
-        { id: 3, text: "Montana", isCorrect: false, etiqueta:"classics", etiqueta2:"castella" },
+        { id: 0, text: "Modern art", isCorrect: false, etiqueta:"tate" },
+        { id: 1, text: "Impressionist paintings", isCorrect: false,  etiqueta:"v&a"},
+        { id: 2, text: "Portraits", isCorrect: false,  etiqueta:"portrait"},
+        { id: 3, text: "Classical art", isCorrect: false , etiqueta:"portrait"},
       ],
     },
     
+    {
+      text: "How do you like to experience a museum visit?",
+      options: [
+        { id: 0, text: "With a guided tour", isCorrect: true, etiqueta:"portrait" },
+        { id: 1, text: "Alone with your thoughts", isCorrect: false, etiqueta:"v&a"},
+        { id: 2, text: "With a group of friends", isCorrect:false, etiqueta:"tate" },
+        { id: 3, text: "With interactive exhibits", isCorrect: false, etiqueta:"serpentine" },
+      ],
+    },
+    {
+      text: "How do you feel about museums with large crowds?",
+      options: [
+        { id: 0, text: "The more the merrier!", isCorrect: false, etiqueta:"v&a" },
+        { id: 1, text: "I prefer to avoid crowds", isCorrect: true, etiqueta:"portrait" },
+        { id: 2, text: "It depends on my mood", isCorrect: false, etiqueta:"serpentine" },
+        { id: 3, text: "I like the energy of a busy museum", isCorrect: false, etiqueta:"tate" },
+      ],
+    },
+    {
+      text: "What do you consider to be the most important aspect of a museum visit?",
+      options: [
+        { id: 0, text: "The quality of the art", isCorrect: false, etiqueta:"tate" },
+        { id: 1, text: "The history behind the pieces", isCorrect: true, etiqueta:"v&a" },
+        { id: 2, text: "The ambiance and atmosphere of the museum", isCorrect: false, etiqueta:"portrait"},
+        { id: 3, text: "The educational opportunities", isCorrect: false, etiqueta:"serpentine"},
+      ],
+    },
+    {
+      text: "How do you like to spend your time in a museum?",
+      options: [
+        { id: 0, text: "Admiring the art in silence", isCorrect: false, etiqueta:"portrait"},
+        { id: 1, text: "Engaging with the exhibits through interactive displays", isCorrect: true, etiqueta:"serpentine" },
+        { id: 2, text: "Relaxing with a coffee and a book in the museum café", isCorrect: false, etiqueta:"tate" },
+        { id: 3, text: "Talking with friends and family", isCorrect: false, etiqueta:"v&a" },
+      ],
+    },
+     {
+      text: "How often do you visit museums?",
+      options: [
+        { id: 0, text: "As often as possible", isCorrect: false, etiqueta:"tate" },
+        { id: 1, text: "Rarely", isCorrect: true, etiqueta:"serpentine" },
+        { id: 2, text: "Occasionally", isCorrect: false, etiqueta:"portrait" },
+        { id: 3, text: "Only on special occasions", isCorrect: false, etiqueta:"v&a" },
+      ],
+    },
+    {
+      text: "Do you prefer museums with a single focus or those with a wide variety of exhibits?",
+      options: [
+        { id: 0, text: "Single focus", isCorrect: false, etiqueta:"serpentine"},
+        { id: 1, text: "Wide variety", isCorrect: true, etiqueta:"tate"},
+        { id: 2, text: "It depends on the museum and my mood", isCorrect: false, etiqueta:"portrait"},
+      ],
+    },
+    {
+      text: "What type of museums do you prefer?",
+      options: [
+        { id: 0, text: "Traditional museums", isCorrect: false, etiqueta:"v&a"},
+        { id: 1, text: "Modern museums", isCorrect: true, etiqueta:"tate" },
+        { id: 2, text: "Museums with a mix of traditional and modern elements", isCorrect: false, etiqueta:"portrait" },
+      ],
+    },
+    {
+      text: "What's your preferred method for navigating a museum?",
+      options: [
+        { id: 0, text: "With a map or guidebook", isCorrect: false, etiqueta:"tate"},
+        { id: 1, text: "By following my intuition and curiosity", isCorrect: true, etiqueta:"serpentine" },
+        { id: 2, text: "With a pre-planned itinerary", isCorrect: false, etiqueta:"v&a"},
+        { id: 3, text: "By joining a tour", isCorrect: false, etiqueta:"portrait" },
+      ],
+    },
+    {
+      text: "Do you like to research the art and artists before visiting a museum?",
+      options: [
+        { id: 0, text: "Absolutely!", isCorrect: false, etiqueta:"tate" },
+        { id: 1, text: "No, I prefer to be surprised", isCorrect: true, etiqueta:"serpentine"},
+        { id: 2, text: "Sometimes, it depends on my mood", isCorrect: false, etiqueta:"portrait" },
+      ],
+    }
   ];
    const recomanacio = [
-    {titol:"obra 1", 
-    label:"amor",
+    {titol:"National Portrait Gallery", 
+    label:"portrait",
     id:1,
     }, 
-    {titol:"obra 2", 
-    label:"humor",
+    {titol:"Tate Modern", 
+    label:"tate",
     id:2
     }, 
-    {titol:"obra 3", 
-    label: "drama",
+    {titol:"Serpentine Gallery", 
+    label:"serpentine",
     id:3
     }, 
-    {titol:"obra 4", 
-    label:"classics",
+    {titol:"V&A Museum", 
+    label:"v&a",
     id:4
-    }, 
-    {titol:"obra 5", 
-    label:"catala",
-    id:5,
-    }, 
-    {titol:"obra 6", 
-    label:"castella",
-    id:6
-    }, 
-    {titol:"obra 7", 
-    label:"amor",
-    id:7
-    }, 
-    {titol:"obra 8", 
-    label:"drama",
-    id:8
-    }, 
-    
-    {titol:"obra 9", 
-    label:"amor",
-    id:9,
-    }, 
-    {titol:"obra 10", 
-    label:"humor",
-    id:10
-    }, 
-    {titol:"obra 11", 
-    label: "drama",
-    id:11
-    }, 
-    {titol:"obra 12", 
-    label:"classics",
-    id:12,
-    }, 
-    {titol:"obra 13", 
-    label:"catala",
-    id:13,
-    }, 
-    {titol:"obra 14", 
-    label:["castella"],
-    id:14
-    }, 
-    {titol:"obra 15", 
-    label:"amor",
-    id:15
-    }, 
-    {titol:"obra 16", 
-    label:"drama",
-    id:16
-    }, 
+    }
   ]; 
   const [obras, setObras] = useState([]);
   const [recomanats, setRecomanants] = useState([]);
@@ -121,14 +123,13 @@ const Quiz = () => {
     return acc[curr] ? ++acc[curr] : acc[curr] = 1, acc;
   }, []);
 
-/*   const [maxEl, setMaxEl] = useState;
- */
-  const amor = occurrences.amor;
-  const humor = occurrences.humor;
-  const classics = occurrences.classics;
+/*   const [maxEl, setMaxEl] = useState;*/
+  const portait = occurrences.portait;
+  const tate = occurrences.tate;
+/*   const classics = occurrences.classics;
   const drama = occurrences.drama;
   const catala = occurrences.catala;
-  const castella = occurrences.castella;  
+  const castella = occurrences.castella;   */
   
   //Helper function
   const optionClicked = (isCorrect, etiqueta, id) => {
@@ -143,6 +144,7 @@ const Quiz = () => {
     }
   }
 
+
   //function label with more occurencies
  
 const mostRepeatedLabel = (arr) =>
@@ -154,15 +156,17 @@ const mostRepeatedLabel = (arr) =>
   const primerLabel = mostRepeatedLabel(obras);
 
   const obrasFiltro = obras.filter((item) => item !== primerLabel)
-  
-  const segundoLabel = mostRepeatedLabel(obrasFiltro);
 
+
+  
+/*   const segundoLabel = mostRepeatedLabel(obrasFiltro);
+ */
 
 
   const respuestaFinal = recomanacio.filter((item) => item.label == primerLabel)
 /*   const respuestaFinal2 = recomanacio.filter((item) => item.label == segundoLabel)
  */    
-
+ console.log (respuestaFinal)
 
 // funcion reset arraty to start quiz again
 
@@ -194,11 +198,11 @@ const restartQuiz = () => {
         {showFinalResults ? (/* 3. Question Card */
         <div className='question-card'>
         <h4>Question {currentQuestion + 1} / {questions.length}</h4>
-        <h2>label: {questions[currentQuestion].text}</h2> <br />
+        <h2>{questions[currentQuestion].text}</h2> <br />
         <ul>{questions[currentQuestion].options.map((option) => {
               return (
-                <li key={option.id} style={{ cursor: "grab" }} >
-                 <button className='button--answer--trans' onClick={() => optionClicked(option.isCorrect, option.etiqueta, option.id)}> {option.text}</button>
+                <li key={option.id}  >
+                 <button style={{ cursor: "grab" }} className='button--answer--trans' onClick={() => optionClicked(option.isCorrect, option.etiqueta, option.id)}> {option.text}</button>
                 </li>
               );
             })}
@@ -207,22 +211,22 @@ const restartQuiz = () => {
     </div>) : (
       /* 3. Final results*/
     <div className='final-results'>
-      <h1>El museo ideal para ti és:</h1>
-      <p>{primerLabel}</p>
+      <h3>El museo ideal para ti és:</h3>
+       <p>label:  {primerLabel}</p>
+ 
       <ul>{respuestaFinal.map((reco, index) => {
-        if(index==1){
               return (
-                <li key={reco.id} >
+                <li className='result-text' key={reco.id} >
                   {reco.titol}
                 </li>
               );
-            }
             })}
       </ul>
       
       < br />
+      < br />< br />
 
-      <button className='restartquiz--buton' onClick={() => restartQuiz()}>Restart quizz</button>
+      <button className='restartquiz--buton' onClick={() => restartQuiz()}>RESTART QUIZ</button>
     </div>) }
     </div>
 
