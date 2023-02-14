@@ -224,7 +224,7 @@ const restartQuiz = () => {
       </ul>
       
       < br />
-      < br />< br />
+      < br />< br />< br />
 
       <button className='restartquiz--buton' onClick={() => restartQuiz()}>RESTART</button>
     </div>) }
