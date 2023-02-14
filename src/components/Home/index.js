@@ -21,7 +21,7 @@ const Home = () => {
 			<div className="panel__content">
 				<div className="panel__text">
 					<h1 className="panel__title">Art Adventurer</h1>
-					<p className="panel__addr"><span></span>London Edition</p>
+					<p className="panel__addr"><span></span>LONDON EDITION</p>
                     <div className='panel--container--link'>
                     <motion.a 
                         className='panel--link' 
@@ -29,7 +29,7 @@ const Home = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         >
-                        START QUIZ</motion.a>
+                        START</motion.a>
                     </div>
 				</div>
 				<div className="panel__line"></div>

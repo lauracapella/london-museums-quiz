@@ -212,8 +212,8 @@ const restartQuiz = () => {
       /* 3. Final results*/
     <div className='final-results'>
       <h3>El museo ideal para ti és:</h3>
-       <p>label:  {primerLabel}</p>
- 
+{/*        <p>label:  {primerLabel}</p>
+ */} 
       <ul>{respuestaFinal.map((reco, index) => {
               return (
                 <li className='result-text' key={reco.id} >
@@ -226,7 +226,7 @@ const restartQuiz = () => {
       < br />
       < br />< br />
 
-      <button className='restartquiz--buton' onClick={() => restartQuiz()}>RESTART QUIZ</button>
+      <button className='restartquiz--buton' onClick={() => restartQuiz()}>RESTART</button>
     </div>) }
     </div>
 

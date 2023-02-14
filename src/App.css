@@ -18,3 +18,14 @@
   font-size: 1rem;
   color: rgb(0, 0, 0);
 }
+
+
+@font-face {
+  font-family: 'DxSlight';
+  src: url('./assets/fonts/DxSlight-MediumUltra.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Dirty';
+  src: url('./assets/fonts/Dirtyline36daysoftype.woff') format('woff');
+}
